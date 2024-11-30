@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Rinconada Ecoparque y Restaurante</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="rinconada">
+
+<header>
+    <h1>La Rinconada Ecoparque y Restaurante</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="#informacion">Información</a></li>
+            <li><a href="#galeria">Galería</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="informacion" class="informacion">
+    <div class="contenido">
+        <div class="texto">
+            <h2>Conexión Unica con la Naturaleza</h2>
+            <p>Este parque ecológico y restaurante le brinda una experiencia única de conexión con la naturaleza. Relájese rodeado de jardines vibrantes llenos de vida y color, disfrute de juegos diseñados para todas las edades y, sobre todo, deguste una gastronomía exquisita que convierte este lugar en un paraíso de sabores y paisajes.</p>
+            <button class="ver-mas" onclick="toggleContenido()">Ver más</button>
+            <div id="mas-informacion" class="mas-informacion">
+                <p><strong>Ubicación:</strong> Camino a Porongo, a solo 15 minutos de la ciudad de Santa Cruz.</p>
+                <p><strong>Áreas Naturales:</strong></p>
+                <ul>
+                    <li>Paseo por senderos naturales</li>
+                    <li>Laguna de Victorias y carpas japonesas</li>
+                    <li>Acuario de peces amazónicos</li>
+                    <li>Rincón de los Gigantes verdes</li>
+                    <li>Sendero de helechos</li>
+                    <li>Rincón del Camba Soñador</li>
+                    <li>Arcoíris de la Tierra</li>
+                    <li>Bosque Lluvioso</li>
+                    <li>El Tacuaral</li>
+                    <li>El Cactario</li>
+                    <li>El Pantanal</li>
+                    <li>La Jungla</li>
+                    <li>Refugio de tucanes y Espejos de agua con peces y cascadas</li>
+                </ul>
+                <p><strong>Áreas Recreativas:</strong></p>
+                <ul>
+                    <li>Parque infantil</li>
+                    <li>Toboganes</li>
+                    <li>Andarivel</li>
+                    <li>Supercolumpios</li>
+                    <li>Giramacas</li>
+                    <li>Cabaña de hamaquitas</li>
+                    <li>Cabaña de hamaca</li>
+                </ul>
+                <p><strong>Piscinas:</strong></p>
+                <ul>
+                    <li>Piscinas con cascadas y toboganes naturales</li>
+                    <li>Piscina infantil con esculturas</li>
+                </ul>
+                
+                <!-- Mapa de la ubicación de La Rinconada -->
+                <div id="mapa-ubicacion">
+                    <h3>Ubicación en el Mapa</h3>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d121573.95537776905!2d-63.39838240273434!3d-17.782948500000007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93f1e81ca7c01a63%3A0x96e568fdf60cda92!2sLa%20Rinconada%20Ecoparque%20y%20Restaurante!5e0!3m2!1ses-419!2sbo!4v1732843795440!5m2!1ses-419!2sbo" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="video">
+            <iframe width="100%" height="500" src="https://player.vimeo.com/video/1034668031?h=14d3d95e01" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin-left: 10px; margin-right: 35px;"></iframe>
+       </div>
+    </div>
+</section>
+
+<section id="galeria" class="galeria">
+    <h2>GALERÍA</h2>
+    <div class="imagen-container">
+        <div class="imagen"><img src="https://i.ibb.co/6mR4JXR/r1.jpg" alt="Imagen 1"></div>
+        <div class="imagen"><img src="https://i.ibb.co/NYHTTjS/r2.jpg" alt="Imagen 2"></div>
+        <div class="imagen"><img src="https://i.ibb.co/MkZbx3j/r3.jpg" alt="Imagen 3"></div>
+        <div class="imagen"><img src="https://i.ibb.co/xmVd81H/r4.jpg" alt="Imagen 4"></div>
+        <div class="imagen"><img src="https://i.ibb.co/xsNpKzk/r5.jpg" alt="Imagen 5"></div>
+        <div class="imagen"><img src="https://i.ibb.co/MMHK4wD/r6.jpg" alt="Imagen 6"></div>
+        <div class="imagen"><img src="https://i.ibb.co/x7hKMyP/r7.jpg"  alt="Imagen 7"></div>
+        <div class="imagen"><img src="https://i.ibb.co/qpg4LZJ/r8.jpg" alt="Imagen 8"></div>
+        <div class="imagen"><img src="https://i.ibb.co/9y9Z6bK/r9.jpg"  alt="Imagen 9"></div>
+       
+        
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2024 La Rinconada Ecoparque y Restaurante</p>
+</footer>
+
+<script>
+    // Función para mostrar más información
+    function toggleContenido() {
+        var contenido = document.getElementById("mas-informacion");
+        var boton = document.querySelector(".ver-mas");
+
+        if (contenido.style.display === "block") {
+            contenido.style.display = "none";
+            boton.textContent = "Ver más";
+        } else {
+            contenido.style.display = "block";
+            boton.textContent = "Ver menos";
+        }
+    }
+</script>
+
+</body>
+</html>

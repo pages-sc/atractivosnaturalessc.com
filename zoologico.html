@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoológico de Santa Cruz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="zoologico">
+
+<header>
+    <h1>Zoológico de Santa Cruz</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="#informacion">Información</a></li>
+            <li><a href="#galeria">Galería</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="informacion" class="informacion">
+    <div class="contenido">
+        <div class="texto">
+            <h2>Descubre la Biodiversidad de Bolivia</h2>
+            <p>En el Zoológico de Santa Cruz, hogar de más de 250 especies sudamericanas, podrás recorrer los circuitos con áreas temáticas como el Aviario Amazónico, La Isla de los Monos, La Fosa del Jaguar, entre otras. Aprenderás sobre la importancia de los animales silvestres y la conservación de la fauna.</p>
+            <button class="ver-mas" onclick="toggleContenido()">Ver más</button>
+            <div id="mas-informacion" class="mas-informacion">
+                <p><strong>Ubicación:</strong> Av. Noel Kempff Mercado, entre el tercer anillo externo e interno.</p>
+                <p><strong>Cómo llegar:</strong> Líneas 40, 41 verde, 42 desde el centro de la ciudad.</p>
+                <p><strong>Actividades:</strong> Recorrido por los circuitos, talleres de Educación Ambiental, avistamiento de aves, fotografía de fauna y más.</p>
+                <p><strong>Horarios de Atención:</strong> Martes a domingo, de 09:00 a.m. a 17:00 p.m.</p>
+                <p><strong>Precio de entrada:</strong> Mayores de 11 años: 15 Bs., Menores de 3 a 11 años: 5 Bs., Menores de 2 años: Gratis, Extranjeros: 25 Bs.</p>
+                
+                <!-- Mapa de la ubicación del Zoológico -->
+                <div id="mapa-ubicacion">
+                    <h3>Ubicación en el Mapa</h3>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60795.03736309592!2d-63.259287451367186!3d-17.759247799999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93f1e7e952f8c979%3A0x2ede5069b806ae29!2sZool%C3%B3gico%20Municipal%20de%20Fauna%20Sudamericana%20Noel%20Kempff%20Mercado!5e0!3m2!1ses-419!2sbo!4v1732843898705!5m2!1ses-419!2sbo" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="video">
+            <iframe width="100%" height="500" src="https://player.vimeo.com/video/1034421252?h=dee6537de9" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin-left: 10px; margin-right: 35px;"></iframe>
+        </div>
+        </div>
+    </div>
+</section>
+
+<section id="galeria" class="galeria">
+    <h2>GALERÍA</h2>
+    <div class="imagen-container">
+        <div class="imagen"><img src="https://i.ibb.co/2PPQnxs/z1.jpg" alt="Imagen 1"></div>
+        <div class="imagen"><img src="https://i.ibb.co/SwWvyfx/z2.jpg" alt="Imagen 2"></div>
+        <div class="imagen"><img src="https://i.ibb.co/cTBs4jp/z3.jpg" alt="Imagen 3"></div>
+        <div class="imagen"><img src="https://i.ibb.co/56DfDvm/z4.jpg" alt="Imagen 4"></div>
+        <div class="imagen"><img src="https://i.ibb.co/gTkcssG/z5.jpg" alt="Imagen 5"></div>
+        <div class="imagen"><img src="https://i.ibb.co/9vvFS3Z/z6.jpg" alt="Imagen 6"></div>
+        <div class="imagen"><img src="https://i.ibb.co/cCqPBps/z8.jpg"  alt="Imagen 7"></div>
+        <div class="imagen"><img src="https://i.ibb.co/YyZvR5t/Zoo.jpg" alt="Imagen 8"></div>
+        <div class="imagen"><img src="https://i.ibb.co/MVJvYxJ/z9.jpg"  alt="Imagen 9"></div>
+       
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2024 Zoológico de Santa Cruz</p>
+</footer>
+
+<script>
+    // Función para mostrar más información
+    function toggleContenido() {
+        var contenido = document.getElementById("mas-informacion");
+        var boton = document.querySelector(".ver-mas");
+
+        if (contenido.style.display === "block") {
+            contenido.style.display = "none";
+            boton.textContent = "Ver más";
+        } else {
+            contenido.style.display = "block";
+            boton.textContent = "Ver menos";
+        }
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laguna Guapilo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="laguna-guapilo">
+
+<header>
+    <h1>Laguna Guapilo</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="#informacion">Información</a></li>
+            <li><a href="#galeria">Galería</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="informacion" class="informacion">
+    <div class="contenido">
+        <div class="texto">
+            <h2>Un Oasis Natural en Santa Cruz</h2>
+            <p>La Laguna Guapilo es un oasis natural en medio de la ciudad de Santa Cruz de la Sierra, donde la biodiversidad y la serenidad del paisaje ofrecen un escape perfecto. Este espacio verde, de 50 hectáreas en el Parque Urbano Guapilo, invita a los visitantes a explorar su rica fauna y flora. La laguna alberga una gran variedad de aves y peces, convirtiéndose en un lugar ideal para la observación de aves, la relajación y la conexión con la naturaleza.</p>
+            <button class="ver-mas" onclick="toggleContenido()">Ver más</button>
+            <div id="mas-informacion" class="mas-informacion">
+                <p><strong>Ubicación:</strong> Se encuentra en el distrito 7, en la zona de Villa 1ro de Mayo, sobre el 9no anillo de Santa Cruz de la Sierra, entre la calle Guapurú y Avenida Troncal.</p>
+
+                <p><strong>Cómo llegar:</strong> Desde el centro de la ciudad se puede tomar el micro verde 43 que dice Laguna Guapilo y lo deja sobre el 9no anillo en la Av. Troncal.</p>
+
+                <p><strong>Actividades:</strong></p>
+                <ul>
+                    <li>Observación de aves</li>
+                    <li>Caminata</li>
+                    <li>Picnic y recreación familiar</li>
+                    <li>Paseo en botes de patos (Solo domingos y feriados)</li>
+                </ul>
+
+                <p><strong>Recomendaciones:</strong> Es recomendable llevar binoculares para la observación de aves y cámara para captar la fauna del lugar. También se sugiere visitar temprano en la mañana o al atardecer, cuando la actividad de las aves es mayor y el clima es más fresco.</p>
+
+                <p><strong>Horario de atención:</strong> Abierto todos los días de la semana, de 6:00 a.m. a 8:00 p.m.</p>
+
+                <p><strong>Entrada:</strong> Acceso gratuito.</p>
+
+                <!-- Mapa de la ubicación de Laguna Guapilo -->
+                <div id="mapa-ubicacion">
+                    <h3>Ubicación en el Mapa</h3>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3799.2382375910215!2d-63.10003522505578!3d-17.78049708317521!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93f1ef489c3d6fa1%3A0x2a9ef84d2c6701e2!2sLaguna%20Guapilo%20Jun%C3%ADn!5e0!3m2!1ses-419!2sbo!4v1732843636716!5m2!1ses-419!2sbo" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="video">
+            <iframe width="100%" height="500" src="https://player.vimeo.com/video/1034409124?h=fefe2bd0c2" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin-left: 10px; margin-right: 35px;"></iframe>
+        </div>
+    </div>
+</section>
+
+<section id="galeria" class="galeria">
+    <h2>GALERÍA</h2>
+    <div class="imagen-container">
+        <div class="imagen"><img src="https://i.ibb.co/jTzwVfG/lg1.jpg" alt="Imagen 1"></div>
+        <div class="imagen"><img src="https://i.ibb.co/B26RFyP/lg2.jpg" alt="Imagen 2"></div>
+        <div class="imagen"><img src="https://i.ibb.co/KGFQryG/lg3.jpg" alt="Imagen 3"></div>
+        <div class="imagen"><img src="https://i.ibb.co/bdWC49S/lg4.jpg" alt="Imagen 4"></div>
+        <div class="imagen"><img src="https://i.ibb.co/vh403Wx/lg5.jpg" alt="Imagen 5"></div>
+        <div class="imagen"><img src="https://i.ibb.co/VHzDNHY/lg6.jpg" alt="Imagen 6"></div>
+        <div class="imagen"><img src="https://i.ibb.co/fNH5Q75/lg7.jpg"  alt="Imagen 7"></div>
+        <div class="imagen"><img src="https://i.ibb.co/HPSx8CV/lg8.jpg"  alt="Imagen 8"></div>
+        <div class="imagen"><img src="https://i.ibb.co/yW2vnnS/lg9.jpg"  alt="Imagen 9"></div>
+       
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2024 Laguna Guapilo</p>
+</footer>
+
+<script>
+    // Función para mostrar más información
+    function toggleContenido() {
+        var contenido = document.getElementById("mas-informacion");
+        var boton = document.querySelector(".ver-mas");
+
+        if (contenido.style.display === "block") {
+            contenido.style.display = "none";
+            boton.textContent = "Ver más";
+        } else {
+            contenido.style.display = "block";
+            boton.textContent = "Ver menos";
+        }
+    }
+</script>
+
+</body>
+</html>

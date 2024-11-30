@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yvaga Guazú</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="yvaga-guazu">
+
+<header>
+    <h1>Yvaga Guazú</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="#informacion">Información</a></li>
+            <li><a href="#galeria">Galería</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="informacion" class="informacion">
+    <div class="contenido">
+        <div class="texto">
+            <h2>El Paraíso Grande de Santa Cruz</h2>
+            <p>Descubre el "Paraíso Grande" de Santa Cruz, Yvaga Guazú es un parque ecológico pionero en sostenibilidad y conservación, con animales silvestres rescatados y coloridas mariposas. Fundado en 1979, este espacio certificado por Green Globe 21 alberga 850 especies de plantas, desde árboles nativos hasta el orquideario más grande de Bolivia, con alrededor de 600 especies de orquídeas. Explora sus 15 senderos a través de una biodiversidad excepcional en zonas protegidas y de uso moderado, ideal para la educación ambiental.</p>
+            <button class="ver-mas" onclick="toggleContenido()">Ver más</button>
+            <div id="mas-informacion" class="mas-informacion">
+                <p><strong>Ubicación:</strong> Se encuentra en el Km. 12 1/2 Doble Vía La Guardia, Santa Cruz de la Sierra, Bolivia.</p>
+
+                <p><strong>Cómo llegar:</strong> Desde el centro de la ciudad pueden agarrar las líneas 23, 10, 108 que los dirija al mercado 'La Ramada' y de ahí agarran cualquier micro que tenga letrero de 'El Torno' o 'La Guardia'.</p>
+
+                <p><strong>Actividades:</strong></p>
+                <ul>
+                    <li>Senderismo interpretativo</li>
+                    <li>Observación de Flora y Fauna</li>
+                    <li>Visitas Guiadas Educativas</li>
+                    <li>Fotografía de Naturaleza</li>
+                    <li>Experiencia Botánica</li>
+                </ul>
+
+                <p><strong>Recomendaciones:</strong> Se recomienda el uso de ropa cómoda, llevar protector solar, agua y evitar plásticos desechables. Escucha las instrucciones de los guías, no alimentes a los animales, y respeta las áreas de conservación. Recuerda: nada de recolección de plantas ni residuos. Con esta actitud de respeto, tu visita será enriquecedora y amigable con la naturaleza.</p>
+
+                <p><strong>Horario de atención:</strong> Lunes a Domingo: 09:00 a.m. - 16:00 p.m.</p>
+
+                <p><strong>Entrada:</strong></p>
+                <ul>
+                    <li>Mayores de 11 años: Bs. 100</li>
+                    <li>Menores entre 5 a 10 años: Bs. 60</li>
+                </ul>
+
+                <!-- Mapa de la ubicación de Yvaga Guazú -->
+                <div id="mapa-ubicacion">
+                    <h3>Ubicación en el Mapa</h3>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3797.3736698798175!2d-63.274454521350386!3d-17.867972739537006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93f1c3dc14231b7b%3A0x18c9773fe5cde96b!2sParque%20Ecol%C3%B3gico%20Yvaga%20Guaz%C3%BA!5e0!3m2!1ses-419!2sbo!4v1732843856533!5m2!1ses-419!2sbo" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="video">
+            <iframe width="100%" height="500" src="https://player.vimeo.com/video/1034409406?h=e582b8e3e6" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin-left: 10px; margin-right: 35px;"></iframe>
+        </div>
+    </div>
+</section>
+
+<section id="galeria" class="galeria">
+    <h2>GALERÍA</h2>
+    <div class="imagen-container">
+        <div class="imagen"><img src="https://i.ibb.co/bRTP5p1/y1.jpg" alt="Imagen 1"></div>
+        <div class="imagen"><img src="https://i.ibb.co/tbSKR6g/y2.jpg" alt="Imagen 2"></div>
+        <div class="imagen"><img src="https://i.ibb.co/qBrhtd3/y3.jpg" alt="Imagen 3"></div>
+        <div class="imagen"><img src="https://i.ibb.co/KqkCPkL/y4.jpg" alt="Imagen 4"></div>
+        <div class="imagen"><img src="https://i.ibb.co/JtFRTXT/y5.jpg" alt="Imagen 5"></div>
+        <div class="imagen"><img src="https://i.ibb.co/b77RR49/y6.jpg" alt="Imagen 6"></div>
+        <div class="imagen"><img src="https://i.ibb.co/FXSvYT6/y7.jpg"  alt="Imagen 7"></div>
+        <div class="imagen"><img src="https://i.ibb.co/Yj5Pkn3/y8.jpg" alt="Imagen 8"></div>
+        <div class="imagen"><img src="https://i.ibb.co/9GQHXyM/Yvaga-Guazu.jpg"  alt="Imagen 9"></div>
+        
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2024 Yvaga Guazú</p>
+</footer>
+
+<script>
+    // Función para mostrar más información
+    function toggleContenido() {
+        var contenido = document.getElementById("mas-informacion");
+        var boton = document.querySelector(".ver-mas");
+
+        if (contenido.style.display === "block") {
+            contenido.style.display = "none";
+            boton.textContent = "Ver más";
+        } else {
+            contenido.style.display = "block";
+            boton.textContent = "Ver menos";
+        }
+    }
+</script>
+
+</body>
+</html>

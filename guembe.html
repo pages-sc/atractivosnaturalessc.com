@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biocentro Güembe</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="biocentro-guembe">
+
+<header>
+    <h1>Biocentro Güembe</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="#informacion">Información</a></li>
+            <li><a href="#galeria">Galería</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="informacion" class="informacion">
+    <div class="contenido">
+        <div class="texto">
+            <h2>Un Oasis de Naturaleza y Biodiversidad</h2>
+            <p>Sumérgete en un oasis de 24 hectáreas de naturaleza pura, donde la biodiversidad cobra vida en cada rincón. Rodeado de plantas exóticas, frondosos bosques tropicales y una gran variedad de animales rescatados y protegidos, el Biocentro Güembe es un santuario diseñado para los amantes de la naturaleza y la aventura.</p>
+            <button class="ver-mas" onclick="toggleContenido()">Ver más</button>
+            <div id="mas-informacion" class="mas-informacion">
+                <p><strong>Ubicación:</strong> Zona de Urubó, a solo 15 minutos del centro de la ciudad de Santa Cruz.</p>
+                <p><strong>Atracciones:</strong> Piscinas Amboró, Piscinas Espejillos, Lagunas, Jungla Aventura, Minigolf, Parque Escultor, Canchas deportivas, Área infantil.</p>
+                <p><strong>Horario de atención:</strong> Miércoles a domingo de 09:30 a.m. - 17:30 p.m.</p>
+                <p><strong>Precios de entrada:</strong></p>
+                <ul>
+                    <li>Adultos (13 a 59 años): 160 Bs.</li>
+                    <li>Niños (5 a 12 años): 70 Bs.</li>
+                    <li>Personas 3ra Edad (60 años en adelante): 70 Bs.</li>
+                </ul>
+                
+                <!-- Mapa de la ubicación del Biocentro Güembe -->
+                <div id="mapa-ubicacion">
+                    <h3>Ubicación en el Mapa</h3>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3799.5096313767403!2d-63.25074762505603!3d-17.76772998318573!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93f1dd20f308ad1f%3A0x77cdf8a71b844e02!2zR8O8ZW1iw6kgQmlvcGFycXVl!5e0!3m2!1ses-419!2sbo!4v1732842590781!5m2!1ses-419!2sbo" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="video">
+            <iframe width="100%" height="500" src="https://player.vimeo.com/video/1034409196?h=aea0bf14ae" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin-left: 10px; margin-right: 35px;"></iframe>
+        </div>
+    </div>
+</section>
+
+<section id="galeria" class="galeria">
+    <h2>GALERÍA</h2>
+    <div class="imagen-container">
+        <div class="imagen"><img src="https://i.ibb.co/nBns9JN/g1.jpg" alt="Imagen 1"></div>
+        <div class="imagen"><img src="https://i.ibb.co/M1d4msq/g2.jpg" alt="Imagen 2"></div>
+        <div class="imagen"><img src="https://i.ibb.co/7p691kt/g3.jpg" alt="Imagen 3"></div>
+        <div class="imagen"><img src="https://i.ibb.co/W3VSP3g/g4.jpg" alt="Imagen 4"></div>
+        <div class="imagen"><img src="https://i.ibb.co/gV7yfVf/g5.jpg" alt="Imagen 5"></div>
+        <div class="imagen"><img src="https://i.ibb.co/3m23y4T/g6.jpg" alt="Imagen 6"></div>
+        <div class="imagen"><img src="https://i.ibb.co/FhCvg9C/g7.jpg" alt="Imagen 7"></div>
+        <div class="imagen"><img src="https://i.ibb.co/fQc1n9r/g8.jpg" alt="Imagen 8"></div>
+        <div class="imagen"><img src="https://i.ibb.co/rxcF4RQ/g9.jpg" alt="Imagen 9"></div>
+       
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2024 Biocentro Güembe</p>
+</footer>
+
+<script>
+    // Función para mostrar más información
+    function toggleContenido() {
+        var contenido = document.getElementById("mas-informacion");
+        var boton = document.querySelector(".ver-mas");
+
+        if (contenido.style.display === "block") {
+            contenido.style.display = "none";
+            boton.textContent = "Ver más";
+        } else {
+            contenido.style.display = "block";
+            boton.textContent = "Ver menos";
+        }
+    }
+</script>
+
+</body>
+</html>

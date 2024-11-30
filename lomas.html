@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lomas de Arena</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="lomas-de-arena">
+
+<header>
+    <h1>Lomas de Arena</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="#informacion">Información</a></li>
+            <li><a href="#galeria">Galería</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="informacion" class="informacion">
+    <div class="contenido">
+        <div class="texto">
+            <h2>Un Paisaje de Dunas y Lagunas</h2>
+            <p>El Parque Regional Lomas de Arena es un destino único cerca de Santa Cruz de la Sierra, famoso por sus impresionantes dunas que se extienden por más de 3,000 hectáreas, creando un paisaje de arena en medio de lagunas estacionales. Este entorno diverso alberga especies como zarigüeyas, osos hormigueros y una gran variedad de aves, haciendo de este parque un lugar perfecto para disfrutar de la naturaleza y el ecoturismo.</p>
+            <button class="ver-mas" onclick="toggleContenido()">Ver más</button>
+            <div id="mas-informacion" class="mas-informacion">
+                <p><strong>Ubicación:</strong> Se encuentra a 12 km al sur de Santa Cruz de la Sierra, en el municipio de La Guardia.</p>
+
+                <p><strong>Actividades:</strong></p>
+                <ul>
+                    <li>Caminatas en las dunas</li>
+                    <li>Avistamiento de fauna</li>
+                    <li>Picnic</li>
+                    <li>Sandboarding</li>
+                </ul>
+
+                <p><strong>Recomendaciones:</strong> Se recomienda llevar protector solar, agua y ropa cómoda, así como una cámara para capturar el espectacular paisaje de dunas y lagunas. También se recomienda ingresar con una operadora turística para realizar el sandboarding e ingresar al parque más cómodamente.</p>
+
+                <p><strong>Horario de atención:</strong> Abierto todos los días de 8:00 a.m. a 4:00 p.m.</p>
+
+                <p><strong>Entrada:</strong></p>
+                <ul>
+                    <li>Mayores: Bs. 20</li>
+                    <li>Menores (5 a 10 años): Bs. 10</li>
+                </ul>
+
+                <!-- Mapa de la ubicación de Lomas de Arena -->
+                <div id="mapa-ubicacion">
+                    <h3>Ubicación en el Mapa</h3>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3795.8205564337113!2d-63.16265342505178!3d-17.940521583044017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93f1ead426c52629%3A0x21f3d64a1af4a087!2sParque%20Regional%20Lomas%20de%20Arena%2C!5e0!3m2!1ses-419!2sbo!4v1732843744231!5m2!1ses-419!2sbo" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="video">
+            <iframe width="100%" height="500" src="https://player.vimeo.com/video/1034409355?h=53c06351e4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin-left: 10px; margin-right: 35px;"></iframe>
+        </div>
+    </div>
+</section>
+
+<section id="galeria" class="galeria">
+    <h2>GALERÍA</h2>
+    <div class="imagen-container">
+        <div class="imagen"><img src="https://i.ibb.co/JQ6DbVR/lar1.jpg" alt="Imagen 1"></div>
+        <div class="imagen"><img src="https://i.ibb.co/94HMc4y/lar2.jpg" alt="Imagen 2"></div>
+        <div class="imagen"><img src="https://i.ibb.co/D7j4d1y/lar3.jpg" alt="Imagen 3"></div>
+        <div class="imagen"><img src="https://i.ibb.co/pbvdGww/lar4.jpg" alt="Imagen 4"></div>
+        <div class="imagen"><img src="https://i.ibb.co/gDTrp8P/lar5.jpg" alt="Imagen 5"></div>
+        <div class="imagen"><img src="https://i.ibb.co/WWy38WQ/lar6.jpg" alt="Imagen 6"></div>
+        <div class="imagen"><img src="https://i.ibb.co/J7W17nr/lar7.jpg"  alt="Imagen 7"></div>
+        <div class="imagen"><img src="https://i.ibb.co/gd6yhVn/lar10.jpg" alt="Imagen 8"></div>
+        <div class="imagen"><img src="https://i.ibb.co/bmP5jCW/lar8.jpg"  alt="Imagen 9"></div>
+       
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2024 Lomas de Arena</p>
+</footer>
+
+<script>
+    // Función para mostrar más información
+    function toggleContenido() {
+        var contenido = document.getElementById("mas-informacion");
+        var boton = document.querySelector(".ver-mas");
+
+        if (contenido.style.display === "block") {
+            contenido.style.display = "none";
+            boton.textContent = "Ver más";
+        } else {
+            contenido.style.display = "block";
+            boton.textContent = "Ver menos";
+        }
+    }
+</script>
+
+</body>
+</html>

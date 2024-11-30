@@ -1,0 +1,398 @@
+/* Reset de algunos estilos por defecto */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales para la página de inicio */
+body.inicio {
+    font-family: Arial, sans-serif;
+    background-color: #5a9d6b; /* Fondo verde claro para la página de inicio */
+    color: #4b804b;
+    line-height: 1.6;
+}
+/* Estilos para las paginas*/
+body {
+    background-color: #759469; /* Fondo para todas las páginas */
+    font-family: Arial, sans-serif; /* Asegúrate de definir la fuente también */
+    line-height: 1.6;
+}
+
+/* Variables de color para facilitar cambios */
+:root {
+    --color-primario: #013c04;
+    --color-secundario: #018f6d;
+    --color-fondo: #61aa51; /* Fondo para la sección de información */
+    --color-fondo-galeria: #8ba347; /* Fondo específico para la galería */
+    --color-texto: #524c33;
+    --color-enlace: #c56018;
+    --color-footer: #549b57;
+}
+
+/* Estilos para el header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-primario);
+    padding: 10px 20px;
+    color: white;
+}
+
+header h1 {
+    font-size: 36px;
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+header nav ul li a:hover {
+    background-color: var(--color-secundario);
+    transform: scale(1.05);
+}
+
+header nav ul li a.active {
+    background-color: var(--color-primario);
+    color: white;
+}
+
+/* Estilos para la sección del carrusel */
+.carrusel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 450px;
+}
+
+.carrusel .imagenes {
+    display: flex;
+    width: 400%;
+    animation: deslizar 30s linear infinite;
+    gap: 0%;
+}
+
+.carrusel .imagenes img {
+    width: 25%;  /* 4 imágenes */
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Animación para deslizar las imágenes */
+@keyframes deslizar {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-25%); }
+    50% { transform: translateX(-50%); }
+    75% { transform: translateX(-75%); }
+    100% { transform: translateX(0); }
+}
+
+/* Estilo para el contenedor de texto superpuesto en el carrusel */
+.portada-texto {
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    color: white;
+    z-index: 10;
+    width: 100%;
+    padding: 10px;
+}
+
+.portada-texto h2 {
+    font-size: 60px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.portada-texto p {
+    font-size: 28px;
+    max-width: 80%;
+    line-height: 1.5;
+    margin-top: 0;
+}
+
+/* Estilos para la sección de información */
+.informacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+/* Estilo para el contenedor de información */
+.informacion .contenido {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 50px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 1200px; /* Ajuste del tamaño máximo */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+/* Ajustando la imagen dentro de la sección de información */
+.informacion .imagen {
+    flex: 1;
+    margin-right: 30px;
+}
+
+.informacion .imagen img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Ajustando el texto dentro de la sección de información */
+.informacion .texto {
+    flex: 1;
+    max-width: 65%;
+}
+
+.informacion .texto h2 {
+    font-size: 32px;
+    margin-bottom: 25px;
+    color: var(--color-primario);
+}
+
+.informacion .texto p {
+    font-size: 20px;
+    color: var(--color-texto);
+    line-height: 1.6;
+}
+
+/* Estilos para los lugares */
+.lugares {
+    padding: 50px;
+    background-color: #537b0d;
+}
+
+.lugares h2 {
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 20px;
+    color: #fbfcfb;
+}
+
+.lugares-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px; /* Limitar el tamaño máximo */
+    margin: 0 auto; /* Centrar el contenedor */
+}
+
+.lugar {
+    width: 30%; /* Esto garantiza que haya 3 lugares por fila */
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.lugar:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Imágenes dentro de los lugares */
+.lugar img {
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Descripción dentro de cada lugar */
+.descripcion {
+    padding: 10px;
+}
+
+.descripcion h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #2E7D32;
+}
+
+.descripcion p {
+    font-size: 14px;
+    color: #616161;
+}
+
+.descripcion a {
+    text-decoration: none;
+    color: var(--color-enlace);
+    font-weight: bold;
+}
+
+/* Estilos para el footer */
+footer {
+    background-color: var(--color-primario);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Estilos para el encabezado */
+header {
+    background-color: var(--color-primario);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin: 0 10px;
+}
+
+/* Estilos para el botón de "Ver más" */
+.ver-mas {
+    background-color: var(--color-secundario);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.ver-mas:hover {
+    background-color: #016f4d;
+    transform: scale(1.05);
+}
+
+/* Estilos para la galería */
+.galeria {
+    padding: 20px;
+    background-color: var(--color-fondo-galeria);
+    font-size: 25px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Estilo para el contenedor de imágenes */
+.galeria .imagen-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas en la cuadrícula */
+    gap: 20px; /* Espacio entre las imágenes */
+    grid-auto-rows: 400px; /* Asegura una altura consistente de las filas */
+    padding: 20px;
+}
+
+/* Mejorando el tamaño de las imágenes */
+.galeria .imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+/* Efecto hover en las imágenes */
+.galeria .imagen:hover img {
+    transform: scale(1.05);
+}
+
+/* Estilo para los enlaces de la galería */
+.galeria a {
+    text-decoration: none;
+    color: inherit;
+}
+/* Ajustes para pantallas pequeñas (máximo 768px de ancho) */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 24px; /* Texto del encabezado más pequeño */
+    }
+
+    .portada-texto h2 {
+        font-size: 36px; /* Reducir el tamaño del título en el carrusel */
+    }
+
+    .portada-texto p {
+        font-size: 16px; /* Reducir el tamaño del texto en el carrusel */
+    }
+
+    .lugares-container {
+        display: grid;
+        grid-template-columns: 1fr; /* Una columna para los lugares */
+        gap: 20px;
+    }
+
+    .informacion .contenido {
+        flex-direction: column; /* Cambiar diseño horizontal a vertical */
+        text-align: center; /* Centrar el contenido */
+    }
+
+    .informacion .imagen img {
+        max-width: 80%; /* Limitar el ancho de la imagen */
+        margin: 0 auto; /* Centrar la imagen */
+    }
+
+    footer {
+        font-size: 14px; /* Texto más pequeño en el pie de página */
+        padding: 10px; /* Ajustar el padding */
+    }
+}
+
+/* Ajustes para pantallas muy pequeñas (máximo 480px de ancho) */
+@media (max-width: 480px) {
+    body {
+        font-size: 0.9rem; /* Texto general más pequeño */
+    }
+
+    header nav ul {
+        flex-direction: column; /* Navegación en columna */
+        gap: 10px; /* Separación entre los elementos */
+    }
+
+    .lugares-container {
+        gap: 15px; /* Reducir el espacio entre lugares */
+    }
+
+    .lugar {
+        width: 100%; /* Ocupa todo el ancho del contenedor */
+    }
+
+    .portada-texto h2 {
+        font-size: 28px;
+    }
+
+    .portada-texto p {
+        font-size: 14px;
+    }
+}
