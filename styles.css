@@ -12,7 +12,8 @@ body.inicio {
     color: #4b804b;
     line-height: 1.6;
 }
-/* Estilos para las paginas*/
+
+/* Estilos para las paginas */
 body {
     background-color: #759469; /* Fondo para todas las páginas */
     font-family: Arial, sans-serif; /* Asegúrate de definir la fuente también */
@@ -177,6 +178,7 @@ header nav ul li a.active {
     font-size: 20px;
     color: var(--color-texto);
     line-height: 1.6;
+    text-align: justify; /* Justificar el texto */
 }
 
 /* Estilos para los lugares */
@@ -244,6 +246,9 @@ header nav ul li a.active {
     color: var(--color-enlace);
     font-weight: bold;
 }
+.informacion p {
+    text-align: justify;
+}
 
 /* Estilos para el footer */
 footer {
@@ -255,6 +260,7 @@ footer {
     width: 100%;
     bottom: 0;
 }
+
 
 /* Estilos para el encabezado */
 header {
@@ -305,94 +311,26 @@ nav li {
     margin-right: auto;
 }
 
-/* Estilo para el contenedor de imágenes */
+/* Estilo para el contenedor de las imágenes (en 3 columnas) */
 .galeria .imagen-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columnas en la cuadrícula */
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas */
     gap: 20px; /* Espacio entre las imágenes */
-    grid-auto-rows: 400px; /* Asegura una altura consistente de las filas */
+    grid-auto-rows: 400px; /* Asegura una altura consistente para las filas */
     padding: 20px;
 }
 
-/* Mejorando el tamaño de las imágenes */
+/* Estilo para las imágenes */
 .galeria .imagen img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; /* Ajusta la imagen al tamaño del contenedor */
     border-radius: 8px;
     transition: transform 0.3s ease;
 }
 
 /* Efecto hover en las imágenes */
 .galeria .imagen:hover img {
-    transform: scale(1.05);
+    transform: scale(1.05); /* Efecto de zoom */
 }
 
-/* Estilo para los enlaces de la galería */
-.galeria a {
-    text-decoration: none;
-    color: inherit;
-}
-/* Ajustes para pantallas pequeñas (máximo 768px de ancho) */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 24px; /* Texto del encabezado más pequeño */
-    }
-
-    .portada-texto h2 {
-        font-size: 36px; /* Reducir el tamaño del título en el carrusel */
-    }
-
-    .portada-texto p {
-        font-size: 16px; /* Reducir el tamaño del texto en el carrusel */
-    }
-
-    .lugares-container {
-        display: grid;
-        grid-template-columns: 1fr; /* Una columna para los lugares */
-        gap: 20px;
-    }
-
-    .informacion .contenido {
-        flex-direction: column; /* Cambiar diseño horizontal a vertical */
-        text-align: center; /* Centrar el contenido */
-    }
-
-    .informacion .imagen img {
-        max-width: 80%; /* Limitar el ancho de la imagen */
-        margin: 0 auto; /* Centrar la imagen */
-    }
-
-    footer {
-        font-size: 14px; /* Texto más pequeño en el pie de página */
-        padding: 10px; /* Ajustar el padding */
-    }
-}
-
-/* Ajustes para pantallas muy pequeñas (máximo 480px de ancho) */
-@media (max-width: 480px) {
-    body {
-        font-size: 0.9rem; /* Texto general más pequeño */
-    }
-
-    header nav ul {
-        flex-direction: column; /* Navegación en columna */
-        gap: 10px; /* Separación entre los elementos */
-    }
-
-    .lugares-container {
-        gap: 15px; /* Reducir el espacio entre lugares */
-    }
-
-    .lugar {
-        width: 100%; /* Ocupa todo el ancho del contenedor */
-    }
-
-    .portada-texto h2 {
-        font-size: 28px;
-    }
-
-    .portada-texto p {
-        font-size: 14px;
-    }
-}
