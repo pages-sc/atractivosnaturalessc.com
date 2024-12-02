@@ -246,9 +246,13 @@ header nav ul li a.active {
     color: var(--color-enlace);
     font-weight: bold;
 }
-.informacion p {
-    text-align: justify;
+.informacion .texto p {
+    text-align: justify; /* Justificar el texto */
+    width: 95%; /* Asegura que el párrafo ocupe el 100% del contenedor */
+    margin: auto; /* Centra el párrafo dentro de su contenedor */
+    line-height: 1.6; /* Mejora la legibilidad */
 }
+
 
 /* Estilos para el footer */
 footer {
