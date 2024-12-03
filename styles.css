@@ -13,10 +13,10 @@ body.inicio {
     line-height: 1.6;
 }
 
-/* Estilos para las paginas */
+/* Estilos para las páginas */
 body {
     background-color: #759469; /* Fondo para todas las páginas */
-    font-family: Arial, sans-serif; /* Asegúrate de definir la fuente también */
+    font-family: Arial, sans-serif;
     line-height: 1.6;
 }
 
@@ -27,7 +27,7 @@ body {
     --color-fondo: #61aa51; /* Fondo para la sección de información */
     --color-fondo-galeria: #8ba347; /* Fondo específico para la galería */
     --color-texto: #524c33;
-    --color-enlace: #c56018;
+    --color-enlace: #d16212;
     --color-footer: #549b57;
 }
 
@@ -107,12 +107,13 @@ header nav ul li a.active {
 .portada-texto {
     position: absolute;
     top: 30%; /* Ajuste vertical */
-    left: 15%; /* Alinea el texto hacia la derecha */
+    left: 5%; /* Alinea el texto hacia la derecha */
     color: white;
     z-index: 10;
     width: auto; /* No necesita ocupar el 100% */
     padding: 10px;
     text-align: left; /* Alineación del texto dentro del contenedor */
+    white-space: nowrap; 
 }
 
 .portada-texto h2 {
@@ -188,6 +189,7 @@ header nav ul li a.active {
     }
 }
 
+/* Ajustes para pantallas más pequeñas */
 @media (max-width: 480px) {
     header h1 {
         font-size: 24px;
@@ -333,7 +335,7 @@ header nav ul li a.active {
 .descripcion a {
     display: inline-block;
     margin-top: 10px;
-    color: #4CAF50;
+    color: #be6018;
     text-decoration: none;
 }
 
@@ -378,3 +380,10 @@ footer {
 footer p {
     font-size: 16px;
 }
+
+/* Asegurando que el pie de página se ajuste */
+footer {
+    font-size: 14px;
+    padding: 10px;
+}
+
