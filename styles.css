@@ -30,7 +30,6 @@ body {
     --color-enlace: #d16212;
     --color-footer: #549b57;
 }
-
 /* Estilos para el header */
 header {
     display: flex;
@@ -189,7 +188,6 @@ header nav ul li a.active {
     }
 }
 
-/* Ajustes para pantallas más pequeñas */
 @media (max-width: 480px) {
     header h1 {
         font-size: 24px;
@@ -335,7 +333,7 @@ header nav ul li a.active {
 .descripcion a {
     display: inline-block;
     margin-top: 10px;
-    color: #be6018;
+    color: #ce7018;
     text-decoration: none;
 }
 
@@ -380,10 +378,3 @@ footer {
 footer p {
     font-size: 16px;
 }
-
-/* Asegurando que el pie de página se ajuste */
-footer {
-    font-size: 14px;
-    padding: 10px;
-}
-
