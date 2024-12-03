@@ -112,6 +112,10 @@ header nav ul li a.active {
     width: 100%;
     padding: 10px;
 }
+.portada-texto {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    border-radius: 8px; /* Opcional, para un borde suave */
+}
 
 .portada-texto h2 {
     font-size: 60px;
