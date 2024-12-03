@@ -30,6 +30,7 @@ body {
     --color-enlace: #d16212;
     --color-footer: #549b57;
 }
+
 /* Estilos para el header */
 header {
     display: flex;
@@ -42,8 +43,10 @@ header {
 
 header h1 {
     font-size: 36px;
+    margin: 0;
 }
 
+/* Estilos para el texto del encabezado */
 header nav ul {
     list-style-type: none;
     display: flex;
@@ -145,74 +148,38 @@ header nav ul li a.active {
 /* Media Query para pantallas más pequeñas */
 @media (max-width: 768px) {
     header h1 {
-        font-size: 28px;
-    }
-
-    .carrusel .imagenes {
-        animation: deslizar 40s linear infinite;
-    }
-
-    .informacion .contenido {
-        flex-direction: column;
-    }
-
-    .informacion .texto {
-        max-width: 100%;
-    }
-
-    .informacion .imagen {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    .galeria .imagen-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .lugares-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .lugar {
-        width: 90%;
-    }
-
-    .portada-texto {
-        top: 20%; /* Ajuste para pantallas más pequeñas */
-        right: 10%; /* Menor desplazamiento a la derecha */
+        font-size: 28px; /* Ajustar tamaño para pantallas medianas */
     }
 
     .portada-texto h2 {
-        font-size: 50px; /* Ajuste del tamaño en móviles */
+        font-size: 50px; /* Ajustar tamaño del texto */
+        margin-bottom: 10px; /* Añadir espacio para que no se quede muy pegado */
+    }
+
+    .portada-texto p {
+        font-size: 24px; /* Reducir tamaño del texto para mayor legibilidad */
     }
 }
 
+/* Ajustes para pantallas más pequeñas */
 @media (max-width: 480px) {
     header h1 {
-        font-size: 24px;
+        font-size: 24px; /* Reducir aún más el tamaño del encabezado */
+        padding: 0 10px; /* Asegurar que no se salga de la pantalla */
     }
 
-    .carrusel .imagenes {
-        animation: deslizar 50s linear infinite;
+    .portada-texto h2 {
+        font-size: 40px; /* Ajuste para pantallas muy pequeñas */
     }
 
-    .galeria .imagen-container {
-        grid-template-columns: 1fr;
+    .portada-texto p {
+        font-size: 18px; /* Reducir texto para móviles pequeños */
+        padding: 0 10px; /* Asegurar que el texto no se desborde */
     }
 
-    .informacion .contenido {
-        padding: 20px;
-    }
-
-    .ver-mas {
-        width: 100%;
-        font-size: 18px;
-        padding: 12px;
-    }
-
-    footer p {
-        font-size: 14px;
+    /* Ajustes para el carrusel */
+    .carrusel {
+        height: 350px; /* Reducir la altura del carrusel en pantallas pequeñas */
     }
 }
 
@@ -354,27 +321,34 @@ header nav ul li a.active {
     color: white;
 }
 
-.imagen-container {
+.galeria-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
+    margin-top: 30px;
 }
 
-.imagen-container img {
+.galeria-item img {
     width: 100%;
-    height: auto;
-    border-radius: 8px;
+    height: 300px;
     object-fit: cover;
+    border-radius: 8px;
 }
 
-/* Estilos para el footer */
+/* Estilos para el pie de página */
 footer {
     background-color: var(--color-footer);
-    padding: 20px;
-    text-align: center;
     color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
 }
 
-footer p {
-    font-size: 16px;
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
