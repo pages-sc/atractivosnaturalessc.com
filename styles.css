@@ -27,10 +27,9 @@ body {
     --color-fondo: #61aa51; /* Fondo para la sección de información */
     --color-fondo-galeria: #8ba347; /* Fondo específico para la galería */
     --color-texto: #524c33;
-    --color-enlace: #c56018;
+    --color-enlace: #d16212;
     --color-footer: #549b57;
 }
-
 /* Estilos para el header */
 header {
     display: flex;
@@ -78,19 +77,20 @@ header nav ul li a.active {
     position: relative;
     overflow: hidden;
     width: 100%;
-    height: 400px; /* Ajustado para ser menos alto */
+    height: 450px;
 }
 
 .carrusel .imagenes {
     display: flex;
     width: 400%;
     animation: deslizar 30s linear infinite;
+    gap: 0%;
 }
 
 .carrusel .imagenes img {
-    width: 100%;
+    width: 25%;  /* 4 imágenes */
     height: 100%;
-    object-fit: cover; /* Esto garantiza que las imágenes no se distorsionen */
+    object-fit: cover;
 }
 
 /* Animación para deslizar las imágenes */
@@ -105,18 +105,23 @@ header nav ul li a.active {
 /* Estilo para el contenedor de texto superpuesto en el carrusel */
 .portada-texto {
     position: absolute;
-    top: 30%;
-    left: 5%;
+    top: 30%; /* Ajuste vertical */
+    left: 5%; /* Alinea el texto hacia la derecha */
     color: white;
     z-index: 10;
-    width: 100%;
+    width: auto; /* No necesita ocupar el 100% */
     padding: 10px;
+    text-align: left; /* Alineación del texto dentro del contenedor */
+    white-space: nowrap; 
 }
 
 .portada-texto h2 {
     font-size: 60px;
     margin-bottom: 5px;
     font-weight: bold;
+    white-space: nowrap; /* Evita que el título se divida */
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .portada-texto p {
@@ -124,6 +129,91 @@ header nav ul li a.active {
     max-width: 80%;
     line-height: 1.5;
     margin-top: 0;
+}
+
+/* Ajustes para pantallas grandes */
+@media (min-width: 1024px) {
+    .portada-texto {
+        top: 20%; /* Ajuste de la posición vertical */
+    }
+
+    .portada-texto h2 {
+        font-size: 80px;
+    }
+}
+
+/* Media Query para pantallas más pequeñas */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 28px;
+    }
+
+    .carrusel .imagenes {
+        animation: deslizar 40s linear infinite;
+    }
+
+    .informacion .contenido {
+        flex-direction: column;
+    }
+
+    .informacion .texto {
+        max-width: 100%;
+    }
+
+    .informacion .imagen {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .galeria .imagen-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .lugares-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .lugar {
+        width: 90%;
+    }
+
+    .portada-texto {
+        top: 20%; /* Ajuste para pantallas más pequeñas */
+        right: 10%; /* Menor desplazamiento a la derecha */
+    }
+
+    .portada-texto h2 {
+        font-size: 50px; /* Ajuste del tamaño en móviles */
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 24px;
+    }
+
+    .carrusel .imagenes {
+        animation: deslizar 50s linear infinite;
+    }
+
+    .galeria .imagen-container {
+        grid-template-columns: 1fr;
+    }
+
+    .informacion .contenido {
+        padding: 20px;
+    }
+
+    .ver-mas {
+        width: 100%;
+        font-size: 18px;
+        padding: 12px;
+    }
+
+    footer p {
+        font-size: 14px;
+    }
 }
 
 /* Estilos para la sección de información */
@@ -241,143 +331,50 @@ header nav ul li a.active {
 }
 
 .descripcion a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #be6018;
     text-decoration: none;
-    color: var(--color-enlace);
-    font-weight: bold;
 }
 
-/* Estilos para el footer */
-footer {
-    background-color: var(--color-primario);
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    position: relative;
-    width: 100%;
-    bottom: 0;
-}
-
-/* Estilos para el encabezado */
-header {
-    background-color: var(--color-primario);
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav li {
-    display: inline;
-    margin: 0 10px;
-}
-
-/* Estilos para el botón de "Ver más" */
-.ver-mas {
-    background-color: var(--color-secundario);
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 5px;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.ver-mas:hover {
-    background-color: #016f4d;
-    transform: scale(1.05);
+.descripcion a:hover {
+    text-decoration: underline;
 }
 
 /* Estilos para la galería */
 .galeria {
-    padding: 20px;
+    padding: 50px;
     background-color: var(--color-fondo-galeria);
-    font-size: 25px;
+}
+
+.galeria h2 {
     text-align: center;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    margin: 20px 0;
+    font-size: 35px;
+    margin-bottom: 20px;
+    color: white;
 }
 
 .imagen-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-    justify-items: center;
+    gap: 20px;
 }
 
-.imagen img {
+.imagen-container img {
     width: 100%;
-    height: 100%;
-    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
     object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Media Queries para la responsividad */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 28px;
-    }
-
-    .carrusel .imagenes {
-        animation: deslizar 40s linear infinite;
-    }
-
-    .carrusel .imagenes img {
-        object-fit: contain;  /* Para que las imágenes no se corten */
-    }
-
-    .informacion .contenido {
-        flex-direction: column;
-        padding: 20px;
-    }
-
-    .informacion .texto {
-        max-width: 100%;
-        font-size: 18px;
-    }
-
-    .informacion .imagen {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    .galeria .imagen-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .lugares-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .lugar {
-        width: 90%;
-    }
+/* Estilos para el footer */
+footer {
+    background-color: var(--color-footer);
+    padding: 20px;
+    text-align: center;
+    color: white;
 }
 
-@media (max-width: 480px) {
-    header h1 {
-        font-size: 24px;
-    }
-
-    .carrusel .imagenes img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-    }
-
-    .galeria .imagen-container {
-        grid-template-columns: 1fr;
-    }
-
-    footer p {
-        font-size: 14px;
-    }
+footer p {
+    font-size: 16px;
 }
