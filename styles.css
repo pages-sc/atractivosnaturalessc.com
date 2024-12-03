@@ -275,8 +275,8 @@ footer {
 
     .lugares-container {
         display: grid;
-        grid-template-columns: 1fr; /* Una columna para los lugares */
-        gap: 20px;
+        grid-template-columns: 1fr 1fr; /* 2 lugares por fila */
+        gap: 10px;
     }
 
     .informacion .contenido {
@@ -297,29 +297,29 @@ footer {
     /* Ajustar el mapa */
     #map {
         height: 250px; /* Ajusta la altura del mapa en pantallas más pequeñas */
+        width: 100%; /* Asegura que el mapa se ajuste al 100% de ancho */
     }
 }
 
 /* Ajustes para pantallas muy pequeñas (máximo 480px de ancho) */
 @media (max-width: 480px) {
-    body {
-        font-size: 0.9rem; /* Texto general más pequeño */
+    header h1 {
+        font-size: 20px; /* Texto del encabezado aún más pequeño */
     }
 
-    header nav ul {
-        flex-direction: column; /* Navegación en columna */
-        gap: 10px; /* Separación entre los elementos */
+    .portada-texto h2 {
+        font-size: 28px; /* Reducir aún más el tamaño del título */
+    }
+
+    .portada-texto p {
+        font-size: 14px; /* Reducir aún más el texto en el carrusel */
     }
 
     .lugares-container {
-        gap: 15px; /* Reducir espacio entre lugares */
+        grid-template-columns: 1fr; /* Solo 1 lugar por fila */
     }
 
-    .lugares h2 {
-        font-size: 30px;
-    }
-
-    .descripcion p {
-        font-size: 12px; /* Texto más pequeño en la descripción */
+    .informacion .contenido {
+        padding: 20px;
     }
 }
