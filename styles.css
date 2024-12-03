@@ -105,16 +105,39 @@ header nav ul li a.active {
 /* Estilo para el contenedor de texto superpuesto en el carrusel */
 .portada-texto {
     position: absolute;
-    top: 30%;
+    top: 30%; /* Posición del texto desde la parte superior */
     left: 5%;
     color: white;
-    z-index: 10;
+    z-index: 10; /* Aseguramos que el texto esté por encima de otras capas */
     width: 100%;
     padding: 10px;
 }
+
+/* Agregar un fondo oscuro con opacidad para mejorar la legibilidad del texto */
 .portada-texto {
     background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
     border-radius: 8px; /* Opcional, para un borde suave */
+}
+
+/* Estilo para el pie de página */
+footer {
+    background-color: var(--color-primario);
+    color: white;
+    text-align: center;
+    padding: 20px 0; /* Aumento el padding para asegurar espacio */
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    z-index: 1; /* Aseguramos que el pie de página esté por debajo del texto */
+}
+
+/* Asegurarse de que el carrusel y el pie de página no se solapen */
+.carrusel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 450px;
+    z-index: 5; /* El carrusel debe estar debajo del texto, pero sobre el pie */
 }
 
 .portada-texto h2 {
