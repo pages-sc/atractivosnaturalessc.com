@@ -187,6 +187,12 @@ header nav ul li a.active {
     .portada-texto h2 {
         font-size: 50px; /* Ajuste del tamaño en móviles */
     }
+
+    .ver-mas {
+        width: 100%;
+        padding: 15px; /* Botón más grande */
+        font-size: 20px; /* Ajuste del tamaño */
+    }
 }
 
 @media (max-width: 480px) {
@@ -202,18 +208,12 @@ header nav ul li a.active {
         grid-template-columns: 1fr;
     }
 
-    .informacion .contenido {
-        padding: 20px;
+    footer p {
+        font-size: 14px;
     }
 
     .ver-mas {
-        width: 100%;
-        font-size: 18px;
-        padding: 12px;
-    }
-
-    footer p {
-        font-size: 14px;
+        font-size: 18px; /* Ajuste más pequeño */
     }
 }
 
@@ -333,13 +333,34 @@ header nav ul li a.active {
 
 .descripcion a {
     display: inline-block;
-    margin-top: 10px;
-    color: #ce6d13;
+    padding: 10px 15px;
+    background-color: var(--color-secundario);
+    color: white;
     text-decoration: none;
-    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 10px;
 }
 
-/* Estilos para la galería */
+.descripcion a:hover {
+    background-color: var(--color-primario);
+}
+
+/* Estilos para el pie de página */
+footer {
+    background-color: var(--color-footer);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    font-size: 16px;
+}
+
+/* Estilos de la galería */
 .galeria {
     padding: 50px;
     background-color: var(--color-fondo-galeria);
@@ -349,88 +370,23 @@ header nav ul li a.active {
     text-align: center;
     font-size: 35px;
     margin-bottom: 20px;
-    color: white;
 }
 
-.imagen-container {
+.galeria .imagen-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+    justify-items: center;
 }
 
-.imagen-container img {
+.galeria .imagen-container img {
     width: 100%;
     height: auto;
     border-radius: 8px;
-    object-fit: cover;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilos para el pie de página */
-footer {
-    background-color: var(--color-footer);
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
-
-footer p {
-    font-size: 16px;
-}
-
-/* Estilos para dispositivos móviles y tablets */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 24px;
-    }
-
-    .portada-texto h2 {
-        font-size: 45px;
-    }
-
-    .informacion .contenido {
-        flex-direction: column;
-    }
-
-    .informacion .imagen img {
-        width: 100%;
-    }
-
-    .informacion .texto {
-        max-width: 100%;
-    }
-
-    .galeria .imagen-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .lugares-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .lugar {
-        width: 100%;
-    }
-}
-
-@media (max-width: 480px) {
-    header h1 {
-        font-size: 20px;
-    }
-
-    .portada-texto h2 {
-        font-size: 35px;
-    }
-
-    .informacion .contenido {
-        padding: 20px;
-    }
-
-    .galeria .imagen-container {
-        grid-template-columns: 1fr;
-    }
-
-    footer p {
-        font-size: 14px;
-    }
+.galeria .imagen-container img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 }
