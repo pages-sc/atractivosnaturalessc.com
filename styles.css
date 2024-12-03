@@ -340,6 +340,10 @@ nav li {
         animation: deslizar 40s linear infinite;
     }
 
+    .carrusel .imagenes img {
+        width: 50%;  /* Reducir el tamaño de las imágenes para pantallas más pequeñas */
+    }
+
     .informacion .contenido {
         flex-direction: column;
     }
@@ -374,6 +378,10 @@ nav li {
 
     .carrusel .imagenes {
         animation: deslizar 50s linear infinite;
+    }
+
+    .carrusel .imagenes img {
+        width: 100%;  /* Hacer las imágenes del carrusel más grandes en pantallas pequeñas */
     }
 
     .galeria .imagen-container {
