@@ -13,10 +13,10 @@ body.inicio {
     line-height: 1.6;
 }
 
-/* Estilos para las páginas */
+/* Estilos para las paginas */
 body {
     background-color: #759469; /* Fondo para todas las páginas */
-    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif; /* Asegúrate de definir la fuente también */
     line-height: 1.6;
 }
 
@@ -24,8 +24,8 @@ body {
 :root {
     --color-primario: #013c04;
     --color-secundario: #018f6d;
-    --color-fondo: #61aa51;
-    --color-fondo-galeria: #8ba347;
+    --color-fondo: #61aa51; /* Fondo para la sección de información */
+    --color-fondo-galeria: #8ba347; /* Fondo específico para la galería */
     --color-texto: #524c33;
     --color-enlace: #c56018;
     --color-footer: #549b57;
@@ -89,7 +89,7 @@ header nav ul li a.active {
 }
 
 .carrusel .imagenes img {
-    width: 25%;
+    width: 25%;  /* 4 imágenes */
     height: 100%;
     object-fit: cover;
 }
@@ -142,7 +142,7 @@ header nav ul li a.active {
     padding: 50px;
     border-radius: 15px;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1200px; /* Ajuste del tamaño máximo */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     display: flex;
     justify-content: space-between;
@@ -198,12 +198,12 @@ header nav ul li a.active {
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 1200px; /* Limitar el tamaño máximo */
+    margin: 0 auto; /* Centrar el contenedor */
 }
 
 .lugar {
-    width: 30%;
+    width: 30%; /* Esto garantiza que haya 3 lugares por fila */
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -285,20 +285,11 @@ nav li {
     font-size: 16px;
     border-radius: 5px;
     transition: transform 0.3s ease, background-color 0.3s ease;
-    display: inline-block;
-    text-align: center;
 }
 
-/* Efecto hover para el botón "Ver más" */
 .ver-mas:hover {
     background-color: #016f4d;
     transform: scale(1.05);
-}
-
-/* Efecto de foco */
-.ver-mas:focus {
-    outline: none;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
 /* Estilos para la galería */
@@ -318,9 +309,9 @@ nav li {
 /* Estilo para el contenedor de imágenes */
 .galeria .imagen-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    grid-auto-rows: 400px;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas en la cuadrícula */
+    gap: 20px; /* Espacio entre las imágenes */
+    grid-auto-rows: 400px; /* Asegura una altura consistente de las filas */
     padding: 20px;
 }
 
@@ -330,9 +321,15 @@ nav li {
     height: 100%;
     object-fit: cover;
     border-radius: 8px;
+    transition: transform 0.3s ease;
 }
 
-/* Responsividad para dispositivos pequeños */
+/* Efecto hover en las imágenes */
+.galeria .imagen img:hover {
+    transform: scale(1.05);
+}
+
+/* Media Queries para la responsividad */
 @media screen and (max-width: 768px) {
     .lugares-container {
         flex-direction: column;
@@ -340,21 +337,34 @@ nav li {
     }
 
     .lugar {
-        width: 80%;
+        width: 90%; /* 1 elemento por fila en móviles */
         margin-bottom: 20px;
     }
 
-    .informacion .contenido {
+    .portada-texto h2 {
+        font-size: 40px;
+    }
+
+    .portada-texto p {
+        font-size: 20px;
+    }
+
+    .informacion {
         flex-direction: column;
         align-items: center;
     }
 
-    .informacion .imagen {
-        margin-right: 0;
-        margin-bottom: 20px;
+    .informacion .contenido {
+        flex-direction: column;
     }
 
-    .ver-mas {
-        font-size: 14px;
+    .informacion .texto,
+    .informacion .imagen {
+        max-width: 100%;
+    }
+
+    .galeria .imagen-container {
+        grid-template-columns: 1fr; /* 1 columna en la cuadrícula */
     }
 }
+
