@@ -12,11 +12,10 @@ body.inicio {
     color: #4b804b;
     line-height: 1.6;
 }
-
-/* Estilos para las páginas */
+/* Estilos para las paginas*/
 body {
     background-color: #759469; /* Fondo para todas las páginas */
-    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif; /* Asegúrate de definir la fuente también */
     line-height: 1.6;
 }
 
@@ -27,7 +26,7 @@ body {
     --color-fondo: #61aa51; /* Fondo para la sección de información */
     --color-fondo-galeria: #8ba347; /* Fondo específico para la galería */
     --color-texto: #524c33;
-    --color-enlace: #d16212;
+    --color-enlace: #c56018;
     --color-footer: #549b57;
 }
 
@@ -106,23 +105,18 @@ header nav ul li a.active {
 /* Estilo para el contenedor de texto superpuesto en el carrusel */
 .portada-texto {
     position: absolute;
-    top: 30%; /* Ajuste vertical */
-    left: 5%; /* Alinea el texto hacia la derecha */
+    top: 30%;
+    left: 5%;
     color: white;
     z-index: 10;
-    width: auto; /* No necesita ocupar el 100% */
+    width: 100%;
     padding: 10px;
-    text-align: left; /* Alineación del texto dentro del contenedor */
-    white-space: nowrap; 
 }
 
 .portada-texto h2 {
     font-size: 60px;
     margin-bottom: 5px;
     font-weight: bold;
-    white-space: nowrap; /* Evita que el título se divida */
-    overflow: hidden;
-    text-overflow: ellipsis;
 }
 
 .portada-texto p {
@@ -130,91 +124,6 @@ header nav ul li a.active {
     max-width: 80%;
     line-height: 1.5;
     margin-top: 0;
-}
-
-/* Ajustes para pantallas grandes */
-@media (min-width: 1024px) {
-    .portada-texto {
-        top: 20%; /* Ajuste de la posición vertical */
-    }
-
-    .portada-texto h2 {
-        font-size: 80px;
-    }
-}
-
-/* Media Query para pantallas más pequeñas */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 28px;
-    }
-
-    .carrusel .imagenes {
-        animation: deslizar 40s linear infinite;
-    }
-
-    .informacion .contenido {
-        flex-direction: column;
-    }
-
-    .informacion .texto {
-        max-width: 100%;
-    }
-
-    .informacion .imagen {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    .galeria .imagen-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .lugares-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .lugar {
-        width: 90%;
-    }
-
-    .portada-texto {
-        top: 20%; /* Ajuste para pantallas más pequeñas */
-        right: 10%; /* Menor desplazamiento a la derecha */
-    }
-
-    .portada-texto h2 {
-        font-size: 50px; /* Ajuste del tamaño en móviles */
-    }
-
-    .ver-mas {
-        width: 100%;
-        padding: 15px; /* Botón más grande */
-        font-size: 20px; /* Ajuste del tamaño */
-    }
-}
-
-@media (max-width: 480px) {
-    header h1 {
-        font-size: 24px;
-    }
-
-    .carrusel .imagenes {
-        animation: deslizar 50s linear infinite;
-    }
-
-    .galeria .imagen-container {
-        grid-template-columns: 1fr;
-    }
-
-    footer p {
-        font-size: 14px;
-    }
-
-    .ver-mas {
-        font-size: 18px; /* Ajuste más pequeño */
-    }
 }
 
 /* Estilos para la sección de información */
@@ -268,7 +177,6 @@ header nav ul li a.active {
     font-size: 20px;
     color: var(--color-texto);
     line-height: 1.6;
-    text-align: justify; /* Justificar el texto */
 }
 
 /* Estilos para los lugares */
@@ -332,61 +240,172 @@ header nav ul li a.active {
 }
 
 .descripcion a {
-    display: inline-block;
-    padding: 10px 15px;
+    text-decoration: none;
+    color: var(--color-enlace);
+    font-weight: bold;
+}
+
+/* Estilos para el footer */
+footer {
+    background-color: var(--color-primario);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Estilos para el encabezado */
+header {
+    background-color: var(--color-primario);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin: 0 10px;
+}
+
+/* Estilos para el botón de "Ver más" */
+.ver-mas {
     background-color: var(--color-secundario);
     color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 10px;
-}
-
-.descripcion a:hover {
-    background-color: var(--color-primario);
-}
-
-/* Estilos para el pie de página */
-footer {
-    background-color: var(--color-footer);
-    color: white;
-    text-align: center;
-    padding: 20px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
-footer p {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
     font-size: 16px;
+    border-radius: 5px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-/* Estilos de la galería */
+.ver-mas:hover {
+    background-color: #016f4d;
+    transform: scale(1.05);
+}
+
+/* Estilos para la galería */
 .galeria {
-    padding: 50px;
+    padding: 20px;
     background-color: var(--color-fondo-galeria);
-}
-
-.galeria h2 {
+    font-size: 25px;
     text-align: center;
-    font-size: 35px;
-    margin-bottom: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
+/* Estilo para el contenedor de imágenes */
 .galeria .imagen-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    justify-items: center;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas en la cuadrícula */
+    gap: 20px; /* Espacio entre las imágenes */
+    grid-auto-rows: 400px; /* Asegura una altura consistente de las filas */
+    padding: 20px;
 }
 
-.galeria .imagen-container img {
+/* Mejorando el tamaño de las imágenes */
+.galeria .imagen img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
-.galeria .imagen-container img:hover {
+/* Estilos para imágenes en hover */
+.galeria .imagen img:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .informacion .contenido {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .informacion .imagen img {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    .lugares-container {
+        flex-direction: column;
+    }
+
+    .carrusel .imagenes {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .informacion .contenido {
+        flex-direction: column;
+        padding: 30px;
+    }
+
+    .informacion .texto {
+        max-width: 100%;
+    }
+
+    .informacion .imagen img {
+        max-width: 100%;
+    }
+
+    .lugar {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .galeria .imagen-container {
+        grid-template-columns: 1fr 1fr; /* Dos columnas */
+    }
+
+    footer {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .portada-texto h2 {
+        font-size: 40px;
+    }
+
+    .portada-texto p {
+        font-size: 18px;
+    }
+
+    header nav ul li {
+        margin: 5px 0;
+    }
+
+    footer {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    .galeria .imagen-container {
+        grid-template-columns: 1fr; /* Una sola columna */
+    }
+
+    .carrusel .imagenes img {
+        width: 100%;
+    }
 }
