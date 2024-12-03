@@ -186,6 +186,11 @@ header nav ul li a.active {
     .portada-texto h2 {
         font-size: 50px; /* Ajuste del tamaño en móviles */
     }
+
+    /* Mejoras para el footer en pantallas pequeñas */
+    footer p {
+        font-size: 14px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -333,7 +338,7 @@ header nav ul li a.active {
 .descripcion a {
     display: inline-block;
     margin-top: 10px;
-    color: #ce7018;
+    color: #be6018;
     text-decoration: none;
 }
 
