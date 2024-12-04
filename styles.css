@@ -443,7 +443,7 @@ nav li {
 }
 @media (max-width: 480px) {
     .portada-texto {
-        top: 20%; /* Ajusta el valor para colocar el texto más abajo */
+        top: 40%; /* Ajusta el valor para colocar el texto más abajo */
     }
 }
 
