@@ -378,6 +378,9 @@ nav li {
 
 /* Ajuste para dispositivos muy pequeños */
 @media (max-width: 480px) {
+    .carrusel {
+        height: 350px;  /* Altura más corta en móviles */
+    }
     .carrusel .imagenes {
         width: 400%; /* Mantener el mismo ancho para las 4 imágenes */
     }
@@ -398,9 +401,6 @@ nav li {
 }
 
 @media (max-width: 768px) {
-    .carrusel {
-        height: 350px;  /* Altura más corta en móviles */
-    }
     header nav ul {
         flex-direction: column;
         gap: 10px;
