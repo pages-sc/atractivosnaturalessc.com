@@ -106,12 +106,12 @@ header nav ul li a.active {
 .portada-texto {
     position: absolute;
     top: 40%; /* Aumenté el porcentaje para que esté más centrado */
-    left: 5%;
+    left: 0%;
     color: white;
     z-index: 10;
     width: 100%;
     padding: 10px;
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    background-color: rgba(0, 0, 0, 0.2); /* Fondo semitransparente */
     border-radius: 8px;
 }
 
@@ -207,6 +207,7 @@ footer {
     font-size: 20px;
     color: var(--color-texto);
     line-height: 1.6;
+    text-align: justify;
 }
 
 /* Estilos para los lugares */
@@ -267,6 +268,7 @@ footer {
 .descripcion p {
     font-size: 14px;
     color: #616161;
+    text-align: justify;
 }
 
 .descripcion a {

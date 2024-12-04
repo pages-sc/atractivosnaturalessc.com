@@ -25,8 +25,8 @@
         <div class="texto">
             <h2>Un oasis natural de flora Boliviana</h2>
             <p>Explora más de 500 especies de flora en el Jardín Botánico de Santa Cruz, un oasis natural de 217 hectáreas que preserva la riqueza de los bosques subtropicales y chaqueños bolivianos. Desde árboles de copa densa hasta cactus y plantas acuáticas en su laguna, este espacio fundado por el reconocido botánico Noel Kempff Mercado es un refugio de vida silvestre.</p>
-            <button class="ver-mas" onclick="toggleContenido()">Ver más</button>
-            <div id="mas-informacion" class="mas-informacion">
+            <button class="ver-mas" onclick="toggleContenido()" aria-expanded="false">Ver más</button>
+            <div id="mas-informacion" class="mas-informacion" style="display: none;">
                 <p><strong>Ubicación:</strong> Ruta Nacional 4, tramo Santa Cruz-Cotoca, kilómetro 8.5 al este de la ciudad de Santa Cruz de la Sierra, en la zona de Guapilo.</p>
                 <p><strong>Cómo llegar:</strong> Desde el centro de la ciudad en el mercado "Los Pozos", entre la calle Barron y Avaroa de la Suarez Arana, puedes tomar micros y trufis hacia Cotoca.</p>
                 <p><strong>Actividades:</strong> Senderismo interpretativo, observación de flora, avistamiento de aves y fauna, fotografía de naturaleza, picnic y recreación familiar.</p>
@@ -59,7 +59,6 @@
         <div class="imagen"><img src="https://i.ibb.co/St9RKXC/j7.jpg" alt="Imagen 7"></div>
         <div class="imagen"><img src="https://i.ibb.co/VY0ymvC/j8.jpg" alt="Imagen 8"></div>
         <div class="imagen"><img src="https://i.ibb.co/NNvtKMQ/j9.jpg" alt="Imagen 9"></div>
-        
     </div>
 </section>
 
@@ -76,9 +75,11 @@
         if (contenido.style.display === "block") {
             contenido.style.display = "none";
             boton.textContent = "Ver más";
+            boton.setAttribute("aria-expanded", "false");
         } else {
             contenido.style.display = "block";
             boton.textContent = "Ver menos";
+            boton.setAttribute("aria-expanded", "true");
         }
     }
 </script>
