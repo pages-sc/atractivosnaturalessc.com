@@ -431,7 +431,7 @@ nav li {
 
 @media (max-width: 480px) {
     .portada-texto {
-        top: 40%; /* Ajusta el valor para colocar el texto más abajo */
+        top: 38%; /* Ajusta el valor para colocar el texto más abajo */
     }
 
     .portada-texto h2 {
@@ -464,7 +464,7 @@ footer p {
 }
 @media (max-width: 480px) {
     header h1 {
-        font-size: 20px;  /* Tamaño más pequeño para dispositivos móviles */
+        font-size: 23px;  /* Tamaño más pequeño para dispositivos móviles */
         white-space: normal;
     }
 }
