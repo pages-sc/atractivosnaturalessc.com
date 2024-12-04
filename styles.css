@@ -464,7 +464,8 @@ footer p {
 }
 @media (max-width: 480px) {
     header h1 {
-        font-size: 25px;  /* Tamaño más pequeño para dispositivos móviles */
+        font-size: 22px;  /* Tamaño más pequeño para dispositivos móviles */
+        white-space: normal;
     }
 }
 
