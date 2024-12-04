@@ -414,14 +414,24 @@ nav li {
         padding: 10px;
     }
 }
-
-/* Media Queries */
 @media (max-width: 480px) {
-    .portada-texto h2 {
-        font-size: 30px;
+    .carrusel {
+        height: 300px; /* Disminuye la altura del carrusel en móviles */
     }
 
-    .portada-texto p {
+    .carrusel .imagenes img {
+        object-fit: cover; /* Mantiene el tamaño proporcional de las imágenes */
+        height: 100%; /* Asegura que las imágenes llenen el espacio sin distorsionarse */
+    }
+    .carrusel .imagenes {
+    display: flex;
+    gap: 0;
+    width: 400%;
+    transition: transform 0.3s ease-in-out;
+    }
+}
+
+.portada-texto p {
         font-size: 18px;
     }
 
@@ -436,12 +446,6 @@ nav li {
 
     .galeria .imagen-container {
         grid-template-columns: 1fr; /* Una sola columna */
-    }
-
-    .carrusel .imagenes img {
-        width: 100%;
-        height: auto;  /* Ajusta la altura para mantener la proporción de la imagen */
-        object-fit: cover;
     }
 }
 
