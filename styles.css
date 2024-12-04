@@ -462,3 +462,10 @@ footer p {
     text-align: center; /* Centra el texto en el footer */
  }
 }
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 28px;  /* Tamaño más pequeño para dispositivos móviles */
+    }
+}
+
+
