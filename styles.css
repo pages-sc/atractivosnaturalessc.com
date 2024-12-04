@@ -379,7 +379,7 @@ nav li {
 /* Ajuste para dispositivos muy pequeños */
 @media (max-width: 480px) {
     .carrusel {
-        height: 350px;  /* Altura más corta en móviles */
+        height: 300px;  /* Altura más corta en móviles */
     }
     .carrusel .imagenes {
         width: 400%; /* Mantener el mismo ancho para las 4 imágenes */
@@ -387,11 +387,6 @@ nav li {
 
     .carrusel .imagenes img {
         width: 100%; /* Cada imagen ocupará el 100% del ancho disponible en móviles */
-    }
-
-    /* Asegurarse de que las imágenes no se vean deformadas */
-    .carrusel .imagenes img {
-        height: auto;
     }
 
     /* Si la animación es demasiado rápida o no se ve bien en móviles, ajusta la duración */
@@ -459,7 +454,7 @@ nav li {
  
 @media (max-width: 480px) {
     .portada-texto {
-        top: 50%; /* Ajusta el valor para colocar el texto más abajo */
+        top: 60%; /* Ajusta el valor para colocar el texto más abajo */
     }
 }
 
