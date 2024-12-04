@@ -469,7 +469,7 @@ footer p {
     }
 }
 @media (max-width: 480px) {
-    #lugares h2 {
+    lugares h2 {
         font-size: 23px; /* Ajusta este valor según el tamaño que prefieras */
         white-space: normal;
     }
