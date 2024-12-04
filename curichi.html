@@ -24,8 +24,12 @@
         <div class="texto">
             <h2>Un humedal urbano de valor ecológico</h2>
             <p>El Área Protegida Municipal del Parque Urbano de Preservación Ecológica Curichi La Madre es un valioso humedal urbano en Santa Cruz que destaca como uno de los ecosistemas más completos del mundo y protegido bajo la Convención RAMSAR. Con una extensión de casi 50 hectáreas, este espacio natural desempeña un papel vital en la regulación hídrica y climática, además de ser refugio para una biodiversidad excepcional. Su rica flora y fauna, junto con su importancia ecológica, lo convierten en un lugar ideal para quienes buscan un contacto profundo con la naturaleza y una experiencia educativa en conservación ambiental.</p>
+            
+            <!-- Botón para mostrar más información -->
             <button class="ver-mas" onclick="toggleContenido()">Ver más</button>
-            <div id="mas-informacion" class="mas-informacion">
+            
+            <!-- Contenido adicional, inicialmente oculto -->
+            <div id="mas-informacion" class="mas-informacion" style="display: none;">
                 <p><strong>Ubicación:</strong> Se encuentra en el distrito 1 de la ciudad de Santa Cruz, al oeste de la ciudad y cerca del río Piraí.</p>
                 <p><strong>Actividades:</strong></p>
                 <ul>
@@ -74,14 +78,19 @@
         var contenido = document.getElementById("mas-informacion");
         var boton = document.querySelector(".ver-mas");
 
-        if (contenido.style.display === "block") {
-            contenido.style.display = "none";
-            boton.textContent = "Ver más";
-        } else {
+        if (contenido.style.display === "none" || contenido.style.display === "") {
             contenido.style.display = "block";
-            boton.textContent = "Ver menos";
+            boton.textContent = "Ver menos"; // Cambia el texto del botón a "Ver menos"
+        } else {
+            contenido.style.display = "none";
+            boton.textContent = "Ver más"; // Cambia el texto del botón a "Ver más"
         }
     }
+
+    // Aseguramos que la información adicional esté oculta al cargar la página
+    window.onload = function() {
+        document.getElementById("mas-informacion").style.display = "none";
+    };
 </script>
 
 </body>
