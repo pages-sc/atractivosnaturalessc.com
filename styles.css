@@ -1,3 +1,10 @@
+/* Reset de algunos estilos por defecto */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* Estilos generales para la página de inicio */
 body.inicio {
     font-family: Arial, sans-serif;
@@ -75,13 +82,13 @@ header nav ul li a.active {
 
 .carrusel .imagenes {
     display: flex;
-    width: 400%; /* 4 imágenes en la versión grande */
+    width: 400%;
     animation: deslizar 30s linear infinite;
     gap: 0%;
 }
 
 .carrusel .imagenes img {
-    width: 25%;  /* 4 imágenes en la versión grande */
+    width: 25%;  /* 4 imágenes */
     height: 100%;
     object-fit: cover;
 }
@@ -104,46 +111,15 @@ header nav ul li a.active {
     z-index: 10;
     width: 100%;
     padding: 10px;
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    background-color: rgba(0, 0, 0, 0.2); /* Fondo semitransparente */
     border-radius: 8px;
 }
 
-/* Ajustes para pantallas pequeñas */
-@media (max-width: 1024px) {
-    /* En dispositivos más pequeños como tabletas, mantenemos la animación */
-    .carrusel .imagenes {
-        width: 400%; /* Seguimos con las 4 imágenes en la versión móvil */
-    }
 
-    .carrusel .imagenes img {
-        width: 100%;  /* En dispositivos pequeños, cada imagen ocupará el 100% del ancho */
-    }
-
-    /* Si la animación se ve rara, puedes ajustar el tiempo de la animación */
-    .carrusel .imagenes {
-        animation: deslizar 25s linear infinite;
-    }
-}
-
-/* Ajuste para dispositivos muy pequeños */
-@media (max-width: 480px) {
-    .carrusel .imagenes {
-        width: 400%; /* Mantener el mismo ancho para las 4 imágenes */
-    }
-
-    .carrusel .imagenes img {
-        width: 100%; /* Cada imagen ocupará el 100% del ancho disponible en móviles */
-    }
-
-    /* Asegurarse de que las imágenes no se vean deformadas */
-    .carrusel .imagenes img {
-        height: auto;
-    }
-
-    /* Si la animación es demasiado rápida o no se ve bien en móviles, ajusta la duración */
-    .carrusel .imagenes {
-        animation: deslizar 20s linear infinite;
-    }
+/* Agregar un fondo oscuro con opacidad para mejorar la legibilidad del texto */
+.portada-texto {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    border-radius: 8px; /* Opcional, para un borde suave */
 }
 
 /* Estilo para el pie de página */
@@ -157,12 +133,14 @@ footer {
     margin-top: 50px; /* Asegura que haya espacio entre el contenido y el pie de página */
 }
 
+
 /* Asegurarse de que el carrusel y el pie de página no se solapen */
 .carrusel {
     position: relative;
     overflow: hidden;
     width: 100%;
     height: 450px;
+
 }
 
 .portada-texto h2 {
@@ -301,8 +279,192 @@ footer {
 
 /* Estilos para el footer */
 footer {
-    background-color: var(--color-footer);
+    background-color: var(--color-primario);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Estilos para el encabezado */
+header {
+    background-color: var(--color-primario);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin: 0 10px;
+}
+
+/* Estilos para el botón de "Ver más" */
+.ver-mas {
+    background-color: var(--color-secundario);
     color: white;
     padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.ver-mas:hover {
+    background-color: #016f4d;
+    transform: scale(1.05);
+}
+
+/* Estilos para la galería */
+.galeria {
+    padding: 20px;
+    background-color: var(--color-fondo-galeria);
+    font-size: 25px;
     text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Estilo para el contenedor de imágenes */
+.galeria .imagen-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas en la cuadrícula */
+    gap: 20px; /* Espacio entre las imágenes */
+    grid-auto-rows: 400px; /* Asegura una altura consistente de las filas */
+    padding: 20px;
+}
+
+/* Mejorando el tamaño de las imágenes */
+.galeria .imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+/* Estilos para imágenes en hover */
+.galeria .imagen img:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 1024px) {
+    /* En dispositivos más pequeños como tabletas, mantenemos la animación */
+    .carrusel .imagenes {
+        width: 400%; /* Seguimos con las 4 imágenes en la versión móvil */
+    }
+
+    .carrusel .imagenes img {
+        width: 100%;  /* En dispositivos pequeños, cada imagen ocupará el 100% del ancho */
+    }
+
+    /* Si la animación se ve rara, puedes ajustar el tiempo de la animación */
+    .carrusel .imagenes {
+        animation: deslizar 25s linear infinite;
+    }
+}
+
+/* Ajuste para dispositivos muy pequeños */
+@media (max-width: 480px) {
+    .carrusel .imagenes {
+        width: 400%; /* Mantener el mismo ancho para las 4 imágenes */
+    }
+
+    .carrusel .imagenes img {
+        width: 100%; /* Cada imagen ocupará el 100% del ancho disponible en móviles */
+    }
+
+    /* Asegurarse de que las imágenes no se vean deformadas */
+    .carrusel .imagenes img {
+        height: auto;
+    }
+
+    /* Si la animación es demasiado rápida o no se ve bien en móviles, ajusta la duración */
+    .carrusel .imagenes {
+        animation: deslizar 20s linear infinite;
+    }
+}
+
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .informacion .contenido {
+        flex-direction: column;
+        padding: 30px;
+    }
+
+    .informacion .texto {
+        max-width: 100%;
+    }
+
+    .informacion .imagen img {
+        max-width: 100%;
+    }
+
+    .lugar {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .galeria .imagen-container {
+        grid-template-columns: 1fr 1fr; /* Dos columnas */
+    }
+
+    footer {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .portada-texto h2 {
+        font-size: 30px;
+    }
+
+    .portada-texto p {
+        font-size: 18px;
+    }
+
+    header nav ul li {
+        margin: 5px 0;
+    }
+
+    footer {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    .galeria .imagen-container {
+        grid-template-columns: 1fr; /* Una sola columna */
+    }
+
+ 
+@media (max-width: 480px) {
+    .portada-texto {
+        top: 50%; /* Ajusta el valor para colocar el texto más abajo */
+    }
+}
+
+p {
+    text-align: justify;
+}
+/* Ajustar el texto en el footer */
+footer p {
+    text-align: center; /* Centra el texto en el footer */
+ }
 }
