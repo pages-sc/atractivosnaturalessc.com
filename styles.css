@@ -462,6 +462,36 @@ footer p {
     text-align: center; /* Centra el texto en el footer */
  }
 }
+#comentarios {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px; /* Espacio superior */
+    margin-bottom: 50px; /* Espacio inferior */
+}
+
+.comentarios-container {
+    background-color: #f4f4f9; /* Fondo del contenedor */
+    padding: 20px; /* Espacio alrededor del formulario */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave para profundidad */
+    width: 650px; /* Ancho del contenedor */
+    text-align: center; /* Alineación del texto */
+}
+
+#comentarios h2 {
+    font-size: 28px; /* Tamaño del título */
+    margin-bottom: 20px; /* Espacio entre el título y el formulario */
+    color: #3e8e41; /* Color del texto (verde claro, puedes cambiarlo) */
+    font-weight: bold;
+}
+    
+iframe {
+    width: 100%; /* El iframe tomará el 100% del contenedor */
+    height: 450px; /* Alto del formulario */
+    border: none; /* Quitar el borde predeterminado */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
 @media (max-width: 480px) {
     header h1 {
         font-size: 23px;  /* Tamaño más pequeño para dispositivos móviles */
