@@ -398,6 +398,9 @@ nav li {
 }
 
 @media (max-width: 768px) {
+    .carrusel {
+        height: 350px;  /* Altura más corta en móviles */
+    }
     header nav ul {
         flex-direction: column;
         gap: 10px;
