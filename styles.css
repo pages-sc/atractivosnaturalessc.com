@@ -415,17 +415,18 @@ nav li {
     }
 }
 
+/* Carrusel en pantallas pequeñas */
 @media (max-width: 480px) {
     .carrusel .imagenes {
-        width: 300%;
+        width: 100%; /* Asegura que el carrusel ocupe todo el ancho */
     }
 
     .carrusel .imagenes img {
-        width: 33.33%;
+        width: 100%;  /* Asegura que cada imagen ocupe el 100% del contenedor */
     }
 
     .portada-texto {
-        top: 50%;
+        top: 50%; /* Ajusta el texto a una posición más centrada */
     }
 
     .portada-texto h2 {
@@ -436,13 +437,10 @@ nav li {
         font-size: 18px;
     }
 
-    header nav ul li {
-        margin: 5px 0;
-    }
-
     footer {
         font-size: 12px;
         padding: 10px;
+        text-align: center; /* Asegura que el texto en el footer esté centrado */
     }
 
     .galeria .imagen-container {
@@ -450,7 +448,7 @@ nav li {
     }
 
     .carrusel {
-        height: 300px;
+        height: 300px; /* Reduce la altura del carrusel en pantallas pequeñas */
     }
 
     .carrusel .imagenes img {
@@ -459,13 +457,20 @@ nav li {
     }
 }
 
-
 @media (max-width: 480px) {
     .portada-texto {
         top: 50%; /* Ajusta el valor para colocar el texto más abajo */
     }
-}
 
+/* Justificación de todos los párrafos, excepto los del footer */
 p {
     text-align: justify;
 }
+
+/* Ajustar el texto en el footer */
+footer p {
+    text-align: center; /* Centra el texto en el footer */
+ }
+}
+
+
