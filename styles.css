@@ -441,6 +441,12 @@ nav li {
         width: 100%;
     }
 }
+@media (max-width: 480px) {
+    .portada-texto {
+        top: 20%; /* Ajusta el valor para colocar el texto más abajo */
+    }
+}
+
 p {
     text-align: justify;
 }
