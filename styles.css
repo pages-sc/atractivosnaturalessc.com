@@ -430,6 +430,10 @@ nav li {
 }
 
 @media (max-width: 480px) {
+    .portada-texto {
+        top: 45%; /* Ajusta el valor para colocar el texto más abajo */
+    }
+
     .portada-texto h2 {
         font-size: 30px;
     }
@@ -449,15 +453,7 @@ nav li {
 
     .galeria .imagen-container {
         grid-template-columns: 1fr; /* Una sola columna */
-    }
-
- 
-@media (max-width: 480px) {
-    .portada-texto {
-        top: 35%; /* Ajusta el valor para colocar el texto más abajo */
-    }
-}
-
+    } 
 p {
     text-align: justify;
 }
