@@ -468,12 +468,41 @@ footer p {
         white-space: normal;
     }
 }
-@media (max-width: 480px) {
-    lugares h2 {
-        font-size: 23px; /* Ajusta este valor según el tamaño que prefieras */
-        white-space: normal;
+/* Estilos específicos para el título "Bienvenido a Santa Cruz" */
+.informacion h2 {
+    font-size: 40px;  /* Ajusta el tamaño del texto de bienvenida */
+    line-height: 1.2;
+    text-align: center;
+}
+
+/* Estilos específicos para el título "Tu próxima aventura comienza en Santa Cruz" */
+.lugares h2 {
+    font-size: 36px;  /* Ajusta el tamaño de este texto */
+    line-height: 1.2;
+    text-align: center;
+}
+
+/* Ajustes para pantallas pequeñas (como móviles) */
+@media (max-width: 768px) {
+    .informacion h2 {
+        font-size: 32px;  /* Ajuste para tabletas */
+    }
+
+    .lugares h2 {
+        font-size: 30px;  /* Ajuste para tabletas */
     }
 }
+
+@media (max-width: 480px) {
+    .informacion h2 {
+        font-size: 24px;  /* Ajuste para móviles */
+    }
+
+    .lugares h2 {
+        font-size: 22px;  /* Ajuste para móviles */
+    }
+}
+
 
 
 
